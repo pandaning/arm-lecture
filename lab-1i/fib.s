@@ -30,3 +30,19 @@ fibonacci:
 	bgt .L5 	@loop
 	pop {r3, r4, r5, pc}
 
+@
+@fibonacci:
+@	@ ADD/MODIFY CODE BELOW
+@	@ PROLOG
+@	push {r3, r4, r5, lr}
+@	subs r3, r0, #0 @ i = r0 - 0
+@	mov r4, #-1 @previous = -1
+@	mov r5, #1 @result = 1
+@	add r4, r4, #1 @for compare
+@	cmp r3, r4 @compare r4 and r3  (if (previous < i) =>if(i>-1)
+@	bgt .L5    @if(i>=0) loop
+@	pop {r3, r4, r5, pc}
+@	@EPILOG
+@	@ END CODE MODIFICATION
+@
+
