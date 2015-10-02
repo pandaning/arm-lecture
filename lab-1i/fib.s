@@ -22,9 +22,9 @@ fibonacci:
 	@EPILOG
 	@ END CODE MODIFICATION
 .L5:
-	adds r0, r4, r5 @sum = result + previous
-	adds r4, r5, #0 @previous = result + 0
-	adds r5, r0, #0 @result = sum + 0
+	add r0, r4, r5 @sum = result + previous
+	add r4, r5, #0 @previous = result + 0
+	add r5, r0, #0 @result = sum + 0
 	subs r3, r3, #1 @i--
 	cmp r3, #1      @if r3(i) > 1
 	bgt .L5 	@loop
