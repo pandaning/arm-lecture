@@ -15,7 +15,7 @@ int main(int argc, char **argv)
   result = fibonacci(number, 1, 0);
   finish = clock();
   duration = (double)(finish - start)/CLOCKS_PER_SEC;
-  printf("The fibonacci sequence at %d is: %d, %f\n", number, result, duration);
+  printf("The fibonacci sequence at %d is: %d %f\n", number, result, duration);
 
   outfile = fopen("result.txt","a");  
   fprintf(outfile, "%d\t%f\n",number, duration);
